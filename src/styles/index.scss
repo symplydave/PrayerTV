@@ -1,0 +1,32 @@
+* {
+  list-style-type: none;
+  box-sizing: border-box;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #006400;
+}
+
+$color-green: #006400;
+$color-1: #f8f8f8;
+
+@mixin button-pri {
+  background: $color-green;
+  color: $color-1;
+  border: none;
+}
+
+@mixin button-sec {
+  background: none;
+  border: #006400 1px solid;
+  color: $color-green;
+}
+
+@import "./App.scss";

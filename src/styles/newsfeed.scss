@@ -1,0 +1,68 @@
+.news {
+  background: $color-1;
+  border: solid $color-1 1px;
+  padding: 0 2rem;
+  text-align: left;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    .card {
+      height: min-content;
+      background: #e4e4e4;
+      padding: 1rem;
+      width: 100%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.7rem;
+      }
+
+      .text {
+        h4 {
+          font-weight: 500;
+          font-size: 1.2rem;
+          margin-top: 0.5rem;
+        }
+        p {
+          margin: 0;
+
+          &.small {
+            font-style: italic;
+            font-size: 0.9rem;
+            margin: 0.7rem 0;
+          }
+        }
+
+        a {
+          color: #222;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .news {
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .news {
+    .container {
+      grid-template-columns: repeat(1, 1fr);
+
+      .card {
+        img {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}
